@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+</head>
+<body>
+    <script>
+
+        // 1
+        let challenge = '30 Days of JavaScript'
+        console.log('2' + challenge);
+
+        // 2
+        console.log(challenge.length)
+
+        // 3
+        console.log(challenge.toUpperCase())
+
+        // 4
+        console.log(challenge.toLowerCase())
+
+        // 5
+        console.log(challenge.substring(1))
+
+        // 6
+        console.log(challenge.substr('0','2'))
+
+        // 8
+        console.log(challenge.includes('Script'));
+
+        // 10
+        console.log(challenge.split(''))
+
+        // 11
+        let site = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'
+        console.log(site.split(','))
+
+        //12
+        console.log(challenge.replace('JavaScript','Python'))
+
+        //13
+        console.log(challenge.charAt(15))
+
+        //14
+        console.log(challenge.charCodeAt(10))
+
+        //15
+        console.log(challenge.indexOf())
+
+        //16
+        console.log(challenge.lastIndexOf())
+
+
+        // Level2
+        console.log("The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another.")
+        console.log("Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead.")
+
+        // 3
+        let testNum = '10';
+        console.log(typeof parseInt(testNum));
+
+
+        //4
+        let testNum2 = parseFloat('9.8');
+        let testNum3 = Math.ceil(testNum2);
+        console.log(testNum3);
+
+        //5
+        let Newarray = [];
+        Newarray.push('phthon','jargon');
+        console.log(Newarray[0].includes('on'))
+
+        //6
+        let sentense = 'i hope this course is not full of jargon'
+        console.log(sentense.includes('jargon'))
+
+        //7
+        let ranNum = Math.floor(Math.random() * 101);
+        console.log('random' + ranNum)
+
+        //8
+        let ranNum2 = Math.floor(Math.random() * 50) + 1;
+        console.log('random' + ranNum2)
+
+        //8
+        let ranNum3 = Math.floor(Math.random() * 255) + 1;
+        console.log('random' + ranNum3)
+
+        //11
+        console.log('1 1 1 1 1 \n2 1 2 4 8\n3 1 3 9 27 \n4 1 4 16 24 \n5 1 5 25 125')
+
+        //12
+        let sentense2 = 'You cannot end a sentence with because because because is a conjunction'
+        console.log(sentense2.substr(31,23))
+        
+        //13
+        let sentense3 = 'Love is the best thing in this world. Some found their love and some are still looking for their love.'
+        let letter = /love/gi
+
+        console.log(sentense3.match(letter))
+
+        //14
+        let sentense4 = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching'
+        let cleanSentense = sentense4.replace(/@/gi,'').replace(/%/gi,'').replace(/&/gi,'').replace(/\$/g,'').replace(/#/gi,'').replace(/!/gi,'').replace(/;/gi,'');
+
+        console.log(cleanSentense)
+
+        //15
+        let txt = 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month'
+        let regEx = /\d+/g
+        let money = txt.match(regEx);
+
+
+        // console.log((money[0] + money[2]) * 12 + money[1])
+        console.log( ( parseInt(money[0]) + parseInt(money[2] ) * 12 + parseInt(money[1])) );
+
+
+        
+    </script>
+</body>
+</html>
