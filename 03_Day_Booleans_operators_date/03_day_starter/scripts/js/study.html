@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Exercise 1 - Level1
+        let firstName = 'im'
+        let lastName = 'sungmin'
+        let country = 'KOREA'
+        let city = "kyungkido"
+        let age = 26
+        let isMarried = false
+        let year = 1996
+
+        console.log(`firstName typeof ${typeof firstName}`)
+        console.log(`lastName typeof ${typeof lastName}`)
+        console.log(`country typeof ${typeof country}`)
+        console.log(`city typeof ${typeof city}`)
+        console.log(`age typeof ${typeof age}`)
+        console.log(`isMarried typeof ${typeof isMarried}`)
+        console.log(`year typeof ${typeof year}`)
+
+        //2
+        let ten = '10'
+        let ten2 = 10
+
+        ten === ten2 
+            ? console.log('same')
+            : console.log('diff ')
+
+
+        //3 
+        let testNum = parseInt('9.8');
+        let testNum2 = 10;
+
+        testNum === testNum2 
+            ? console.log('ten is same')
+            : console.log('ten i s diff')
+
+        //4
+        console.log(4 > 3) // true
+        console.log(4 >= 3) // true
+        console.log(4 < 3) // false
+        console.log(4 <= 3) // falae
+        console.log(4 == 4) // true
+        console.log(4 === 4) // true 
+        console.log(4 != 4) // false 
+        console.log(4 !== 4) // false 
+        console.log(4 != '4') // false
+        console.log(4 == '4') // true
+        console.log(4 === '4') // false
+
+        console.log('ddd')
+
+        //5
+        console.log(4 > 3 && 10 < 12) // true
+        console.log(4 > 3 && 10 > 12) // false
+        console.log(4 > 3 || 10 < 12) // true
+        console.log(4 > 3 || 10 > 12) // true
+        console.log(!(4 > 3)) // false
+        console.log(!(4 < 3)) // true
+        console.log(!(false)) // true
+        console.log(!(4 > 3 && 10 < 12)) // false
+        console.log(!(4 > 3 && 10 > 12))  // true
+        console.log(!(4 === '4')) // true
+
+        //Lv2 
+
+        /*
+        1
+        let b = prompt('Enter base', 20)
+        let h = prompt('Enter height', 10)
+        let area = alert(0.5 * b * h)
+
+        console.log(b)
+        console.log(h)
+        console.log(area)
+        */
+
+        
+        /*
+        2
+        let tri1 = Number(prompt('enter a'));git cd
+        let tri2 = Number(prompt('enter b'));
+        let tri3 = Number(prompt('enter c'));
+        let triResult = alert(`삼각형의 둘레는 ${tri1 + tri2 +  tri3} 입니다`)
+
+        console.log(tri1)
+        console.log(tri2)
+        console.log(tri3)
+        console.log(triResult)
+        */
+
+        // Exercise3
+        
+        
+    </script>
+
+    <style>
+        * {padding:0;margin:0;border:0;}
+        .quiz {max-width:900px;width:100%;margin: 200px auto;text-align:center;}
+        .quiz input {display:inline-block;width:300px;height:30px;margin-top:30px;border:1px solid #dbdee1;vertical-align:top;}
+        .quiz button {display:inline-block;width:100px;height:30px;margin-top:30px;background:#dbdee1;font-weight:bold;vertical-align:top;}
+
+        #result {margin-top:15px;color:red;}
+        #result2Area {margin-top:15px;}
+        #result2Area #result2 {color:#fff;}
+    </style>
+
+    <div class="quiz">
+        <p class="quizTxt">
+            <span id="nationName">국가</span> 
+        </p>
+        <input type="text" id="nationBox">
+        <button onclick="btnFun();" id="resultBtn">정답</button>
+
+        <div id="result">-</div>
+
+        <div id="result2Area">정답 보기 : <span id="result2"></span></div>
+    </div>
+    <script>
+        let nation = ['뉴질랜드', '대만', '라오스', '말레이시아', '방글라데시', '베트남', '싱가포르', '인도', '인도네시아', '일본', '중국', '캄보디아', '태국', '필리핀', '호주', '홍콩', '네덜란드', '덴마크', '독일', '벨기에', '불가리아', '스웨덴', '스위스', '스페인', '영국', '이탈리아', '체코', '핀란드', '캐나다', '아랍에미리트', '터키', '멕시코', '브라질', '아르헨티나', '러시아']
+
+
+        let capital = ['웰링턴', '타이베이', '비에티안', '쿠알라룸푸르', '다카', '하노이', '싱가포르', '뉴델리', '자카르타', '도쿄', '상해', '프놈펜', '방콕', '마닐라', '캔버라', '홍콩', '암스테르담', '코펜하겐', '베를린',  '브리쉘', '소피아', '스톡홀름', '베른', '마드리드', '런던', '로마', '프라하', '헬싱키', '오타와', '아부다비', '앙카라', '멕시코시티', '브라질리아', '부에노스아이레스', '모스크바']
+
+        let nationLength = nation.length;
+        let randomNum = Math.floor(Math.random() * nationLength) 
+        let inputArea = document.getElementById('nationBox')
+
+
+        // set Text
+        document.getElementById('nationName').innerText = nation[randomNum] 
+        document.getElementById('result2').innerText = capital[randomNum] 
+
+        // focus event
+        let focusEvnt = () => {
+            inputArea.focus()
+        }
+
+        focusEvnt();
+
+        // 버튼 Click event
+        let btnFun = () => {
+            let resultIndex = capital.indexOf(inputArea.value)
+
+            randomNum === resultIndex  
+                ? (document.getElementById('result').innerText = "정답입니다",
+                    setTimeout( () => window.location.reload(), 500 )
+                )
+                : document.getElementById('result').innerText = "정답이 아닙니다"
+        }
+
+        // Enter시 input 동작
+        inputArea.addEventListener('keyup', (e) => {
+            if (event.keyCode === 13){
+                event.preventDefault();
+                document.getElementById('resultBtn').click();
+            }
+        })
+
+    </script>
+</body>
+</html>
