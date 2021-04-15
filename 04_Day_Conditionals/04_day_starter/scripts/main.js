@@ -150,3 +150,35 @@ switch (true) {
     break;
 }
 */
+
+// 3
+/*
+const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
+shoppingCart.push('sugar')
+shoppingCart[3] = 'Green Tea'
+
+console.log(shoppingCart)
+*/
+
+//4
+/*
+const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux'];
+const backEnd = ['Node', 'Express', 'MongoDB'];
+
+const fullStack = frontEnd.concat(backEnd);
+console.log(fullStack)
+*/
+
+// Level3 
+
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+const agesLen = ages.length
+const maxValue = Math.max.apply(null, ages);
+const minValue = Math.min.apply(null, ages);
+
+const average = Number(ages[0]) + Number(ages[1]) + Number(ages[2]) + Number(ages[3])
+
+
+console.log(maxValue)
+console.log(minValue)
+console.log(average)
