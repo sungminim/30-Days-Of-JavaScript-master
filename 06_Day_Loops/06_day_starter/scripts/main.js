@@ -1,2 +1,12 @@
-console.log(countries)
-alert('Open the console and check if the countries has been loaded')
+/* 1
+for (let i = 0; i <= 10; i++){
+    console.log(i)
+}
+*/
+
+for (let i = 0; i <= 7; i++){
+    let txt = '#';
+    document.write(txt)
+
+}
+
