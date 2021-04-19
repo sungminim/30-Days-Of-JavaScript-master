@@ -80,14 +80,24 @@ for (i = 0; i < 8; i++) {
 // }
 
 
-// let randomNum = Math.floor(Math.random() * 10);
 // let arr = new Array();
 
 // for(i = 1; i <= 5; i++){
-//     randumArr = randomNum * i
-//     arr.push(randumArr)
-// }
-// console.log(arr)
+    //     randumArr = randomNum * i
+    //     arr.push(randumArr)
+    // }
+    // console.log(arr)
+    
+// let randomNum = Math.floor(Math.random() * 101);
+// let ranTxt = Math.random().toString(36).substr(2,randomNum);
+// console.log(ranTxt)
 
-let ranTxt = Math.random().toString(36).substr(2,11);
-console.log(ranTxt)
+let rgbNum = Math.floor(Math.random() * 255) + 1;
+let rgbNum2 = Math.floor(Math.random() * 255) + 1;
+let rgbNum3 = Math.floor(Math.random() * 255) + 1;
+
+let ranRgb = `rgb(${rgbNum}, ${rgbNum2}, ${rgbNum3})`
+console.log(ranRgb)
+
+let square = document.getElementById('square');
+square.style.backgroundColor = ranRgb

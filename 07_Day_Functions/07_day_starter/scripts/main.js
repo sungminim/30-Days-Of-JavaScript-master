@@ -1,2 +1,7 @@
-console.log(countries)
-alert('Open the console and check if the countries has been loaded')
+function Name(firstName, lastName) {
+ 
+ 
+    let sum = firstName + lastName
+    return sum 
+    console.log (Name(h,b));
+}
