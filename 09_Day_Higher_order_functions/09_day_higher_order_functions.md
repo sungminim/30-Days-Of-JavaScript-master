@@ -151,6 +151,7 @@ setInterval(callback, duration)
 function sayHello() {
   console.log('Hello')
 }
+
 setInterval(sayHello, 2000) // it prints hello in every 2 seconds
 ```
 
@@ -163,6 +164,7 @@ In JavaScript, we use setTimeout higher order function to execute some action at
 function callback() {
   // code goes here
 }
+
 setTimeout(callback, duration) // duration in milliseconds
 ```
 
@@ -185,6 +187,7 @@ _forEach_: Iterate an array elements. We use _forEach_ only with arrays. It take
 arr.forEach(function (element, index, arr) {
   console.log(index, element, arr)
 })
+
 // The above code can be written using arrow function
 arr.forEach((element, index, arr) => {
   console.log(index, element, arr)
@@ -212,13 +215,12 @@ console.log(sum)
 ```js
 let sum = 0;
 const numbers = [1,2,3,4,5];
-numbers.forEach(num => sum += num))
+numbers.forEach(num => sum += num))   `
 
 console.log(sum)
 ```
 
 ```sh
-15
 ```
 
 ```js
