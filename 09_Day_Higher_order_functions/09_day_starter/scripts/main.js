@@ -178,14 +178,52 @@
 // }
 
 
-let number = 30;
-let one = [1, 2, 3, 4, 5];
+// let number = 30;
+// let one = [1, 2, 3, 4, 5];
 
 
-for (i=0; i < (number / 5); i++ ){
-    let newOne = [
-        ...one + "," * i
-    ]
-    console.log(newOne)
-}
+// for (i=0; i < (number / 5); i++ ){
+//     let newOne = [
+//         ...one + "," * i
+//     ]
+//     console.log(newOne)
+// }
 
+
+// const oneTwoThree = [1, 2, 3];
+// result = oneTwoThree.reduce((acc, cur, i) => {
+//     console.log(acc, cur, i);
+//     return acc + cur;
+//   }, 0);
+//   // 0 1 0
+//   // 1 2 1
+//   // 3 3 2
+//   result; // 6
+
+//  Exercise 1
+const  c  =  [ 'Finland' ,  'Sweden' ,  'Denmark' ,  'Norway' ,  'IceLand' ] 
+const  names  =  [ 'Asabeneh' ,  'Mathias' ,  'Elias' ,  'Brook' ] 
+const  numbers  =  [ 1 ,  2 ,  3 ,  4 ,  5 ,  6 ,  7 ,  8 ,  9 ,  10 ] 
+const  제품  = [ 
+  {  제품 : '바나나' ,  가격 : 3  } , 
+  {  제품 : '망고' ,  가격 : 6  } , 
+  {  제품 : '감자' ,  가격 : ''  } , 
+  {  제품 : '아보카도' ,  가격 : 8  } , 
+  {  product : 'coffee' ,  price : 10  } , 
+  {  product: '차' ,  가격 : ''  } , 
+]
+
+
+// countries.forEach(function(e) {
+//     console.log(e); 
+// })
+
+// names.forEach(function(e) {
+//     console.log(e)
+// })
+
+// numbers.forEach(function (e) {
+//     console.log(e)
+// }) 
+
+names.forEach((element) => console.log(element.toUpperCase()))
