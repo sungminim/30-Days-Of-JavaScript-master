@@ -45,6 +45,9 @@
 Variable is the fundamental part in programming. We declare variable to store different data types. To declare a variable we use the key word _var_, _let_ and _const_. A variable can declared at different scope. In this section we will see the scope, scope of variables when we use var or let.
 Variables scopes can be:
 
+변수는 프로그래밍의 핵심적인 부분이다. 우리는 다양한 데이터 타입을 저장하기위해 이를 선언한다. 우리는 선언을 하기 위해 var, leg, const라는 다양한 키워드를 사용한다. 
+이 섹션에서 우리는 스코프를 볼 것이다. 
+
 - Window
 - Global
 - Local
@@ -54,7 +57,10 @@ Anything declared without let, var or const is scoped at window level.
 
 Let us image we have a scope.js file.
 
-### Window Scope
+### Window Scope 
+### 전역변수
+
+전역변수 : 재할당 가능, 재선언 가능
 
 Without using console.log() open your browser and check, you will see the value of a and b if you write a or b on the browser. That means a and b are already available in the window.
 
@@ -72,6 +78,9 @@ console.log(a, b) // accessible
 ```
 
 ### Global scope
+### 글로벌 변수
+
+글로벌 변수 : 재할당 가능 재선언 불가
 
 A globally declared variable can be accessed every where in the same file. But the term global is relative. It can be global to the file or it can be global relative to some block of codes.
 
@@ -164,6 +173,10 @@ for(let i = 0; i < 3; i++){
   console.log(i) // 1, 2, 3
 }
 // console.log(i), Uncaught ReferenceError: gravity is not defined
+
+
+/* 
+
 
 ```
 
