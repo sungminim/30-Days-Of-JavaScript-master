@@ -2011,3 +2011,11 @@ const countries = [
     currency: 'Botswana pula'
   }
 ]
+
+
+const newCountreis = countries.map((e) => e.languages)
+const all_arr = newCountreis.reduce((acc,val)=> acc.concat(val),[])
+
+const arrLen = new Set(all_arr)
+
+console.log(arrLen.length)
