@@ -14,7 +14,7 @@ const usersText = `{
     "lastName":"James",
     "age":25,
     "email":"alex@alex.com"
-    },
+
     {
     "firstName":"Lidiya",
     "lastName":"Tekle",

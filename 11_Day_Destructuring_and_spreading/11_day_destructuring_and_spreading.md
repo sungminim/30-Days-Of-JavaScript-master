@@ -38,11 +38,13 @@
 
 # Day 11
 
-## Destructuring and Spread
+## Destructuring and Spread (구조화 및 확산)
 
 Destructuring is a way to unpack arrays, and objects and assigning to a distinct variable.
 
-### Destructing Arrays
+Destructuring은 배열과 객체의 압축을 풀고 고유 한 변수에 할당하는 방법입니다.
+
+### Destructing Arrays (배열 파괴)
 
 ```js
   const numbers = [1, 2, 3]
@@ -95,6 +97,8 @@ console.log(backEnd)
 
 If we like to skip on of the values in the array we use additional comma. The comma helps to omit the value at that specific index
 
+배열의 값을 건너 뛰려면 추가 쉼표를 사용합니다. 쉼표는 특정 색인에서 값을 생략하는 데 도움이됩니다.
+
 ```js
   const numbers = [1, 2, 3]
   let [numOne, , numThree] = numbers //2 is omitted
@@ -102,9 +106,13 @@ If we like to skip on of the values in the array we use additional comma. The co
   console.log(numOne, numThree)
 ```
 
+
+
 ```sh
 1 3
 ```
+
+
 
 ```js
   const names = ['Asabeneh', 'Brook', 'David', 'John']
@@ -113,11 +121,15 @@ If we like to skip on of the values in the array we use additional comma. The co
   console.log(secondPerson, fourthPerson)
 ```
 
+
+
 ```sh
 Brook John
 ```
 
 We can use default value in case the value of array for that index is undefined:
+
+배열의 값을 건너 뛰려면 추가 쉼표를 사용합니다. 쉼표는 특정 색인에서 값을 생략하는 데 도움이됩니다.
 
 ```js
 const names = [undefined, 'Brook', 'David']
@@ -131,11 +143,15 @@ let [
 console.log(firstPerson, secondPerson, thirdPerson, fourthPerson)  
 ```
 
+
+
 ```sh
 Asabeneh Brook David John
 ```
 
 We can not assign variable to all the elements in the array. We can destructure few of the first and we can get the remaining as array using spread operator(...).
+
+배열의 모든 요소에 변수를 할당 할 수는 없습니다. 우리는 첫 번째 것 중 몇 개를 해체 할 수 있고, 스프레드 연산자 (...)를 사용하여 나머지를 배열로 얻을 수 있습니다.
 
 ```js
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -144,6 +160,8 @@ let [num1, num2, num3, ...rest] = nums
 console.log(num1, num2, num3)
 console.log(rest)
 ```
+
+
 
 ```sh
 1 2 3
@@ -160,11 +178,15 @@ console.log(country, city)
 }
 ```
 
+
+
 ```sh
 Finland Helsinki
 Sweden Stockholm
 Norway Oslo
 ```
+
+
 
 ```js
 const fullStack = [
@@ -176,6 +198,8 @@ for(const [first, second, third] of fullStack) {
 console.log(first, second, third)
 }
 ```
+
+
 
 ```sh
 HTML CSS JS
@@ -601,7 +625,7 @@ const users = [
 ### Exercises: Level 3
 
 1. Destructure the countries object print name, capital, population and languages of all countries
-2. A junior developer structure student name, skills and score in array of arrays which may not easy to read. Destructure the following array name to name, skills array to skills, scores array to scores, JavaScript score to jsScore and React score to reactScore variable in one line.
+2. A junior developer structure student name, skills and score in array of arrays which may not easy to read. Destructure the following array name to name, skills array to skills, scores array to scores, JavaScript score to jsScore and React score to reactScore variable in one line. 
 
   ```js
     const student = ['David', ['HTM', 'CSS', 'JS', 'React'], [98, 85, 90, 95]]
@@ -613,7 +637,6 @@ const users = [
   ```
 
 3. Write a function called *convertArrayToObject* which can convert the array to a structure object.
-   
   ```js
       const students = [
           ['David', ['HTM', 'CSS', 'JS', 'React'], [98, 85, 90, 95]],
@@ -663,7 +686,7 @@ const users = [
         dataScience:['Python', 'R', 'D3.js']
       }
     }
-  ```
+```
 
  The copied object output should look like this:
 
