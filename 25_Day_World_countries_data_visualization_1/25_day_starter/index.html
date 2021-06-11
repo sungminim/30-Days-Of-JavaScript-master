@@ -6,26 +6,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>World Countries Data</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="./data/countries_data.js"></script>
+    <script src="./scripts/main.js"></script>
 </head>
 
-<body>
-    <header id="countries">
-        <h2>World Countries Data</h2>
-        <p class="subtitle"></p>
-        <p class="feedback"></p>
-    </header>
+<body  onload="populationClick()">
     <main>
 
+        <style>
+            * {padding:0;margin:0;}
+            body {background:#eee;overflow-x:hidden;}
+            h1 {font-size:40px;text-align:center;color:#f2a93b;font-family:'Montserrat',sans-serif;font-weight:500;letter-spacing:1px;}
+            h1 span {display:block;padding:15px 0;color:gray;font-size:20px;letter-spacing:-1px;;}
+
+            ul li {list-style:none;}
+
+            .graph-buttons {background:#fff;padding:30px 0;box-sizing:border-box;text-align:center;}
+            button {border:none;background:#f2a93b;padding:10px 20px;font-size:17px;letter-spacing:-0px;color:#222;font-weight:500;}
+            button+button {margin-left:15px;}
+
+            .graph-wrapper ul {padding:100px 50px;box-sizing:border-box;}
+            .graph-wrapper ul li {font-size:0;}
+            .graph-wrapper ul li .statusWrap {width:100%;}
+            .graph-wrapper ul li .statusWrap .bar {display:block;width:100%;height:30px;background:#f2a93b;font-size:0;line-height:30px;}
+            .graph-wrapper ul li+li {margin-top:15px;}
+            .graph-wrapper ul li div {display:inline-block;vertical-align: top;font-size:20px;}
+            .graph-wrapper ul li div:nth-child(1) {width:300px;}
+            .graph-wrapper ul li div:nth-child(2) {width:calc(100% - 500px)}
+            .graph-wrapper ul li div:nth-child(3) {width:200px;text-align: right;}
+
+        </style>
+
         <div class="wrapper">
+            <h1>
+                World Countries Data
+                <span>Currently, we have 250 countries </span>
+            </h1>
+
             <div class="graph-buttons">
-                <button class="population">Population</button>
-                <button class="languages">Languages</button>
+                <button class="population" onclick=" populationClick()">POPULATION</button>
+                <button class="languages">LANGUAGES</button>
             </div>
             <h4 class="graph-title"></h4>
             <div class="graphs">
-                <div class="graph-wrapper" id="stat"></div>
+                <div class="graph-wrapper" id="stat">
+                    <ul>
+                        <li id="status0">
+                            <div id="name0"></div>
+                            <div class="statusWrap">
+                                <span class="bar" id="bar0"></span>
+                            </div>
+                            <div id="value0"></div>
+                        </li>
+                        <li id="status1">
+                            <div id="name1"></div>
+                            <div class="statusWrap">
+                                <span class="bar" id="bar1"></span>
+                            </div>
+                            <div id="value1"></div>
+                        </li>
+                        <li id="status2">
+                            <div id="name2"></div>
+                            <div class="statusWrap">
+                                <span class="bar" id="bar2"></span>
+                            </div>
+                            <div id="value2"></div>
+                        </li>
+                        <li id="status3">
+                            <div id="name3"></div>
+                            <div class="statusWrap">
+                                <span class="bar" id="bar3"></span>
+                            </div>
+                            <div id="value3"></div>
+                        </li>
+                        <li id="status4">
+                            <div id="name4"></div>
+                            <div class="statusWrap">
+                                <span class="bar" id="bar4"></span>
+                            </div>
+                            <div id="value4"></div>
+                        </li>
+                        <li id="status5">
+                            <div id="name5"></div>
+                            <div class="statusWrap">
+                                <span class="bar" id="bar5"></span>
+                            </div>
+                            <div id="value5"></div>
+                        </li>
+                        <li id="status6">
+                            <div id="name6"></div>
+                            <div class="statusWrap">
+                                <span class="bar" id="bar6"></span>
+                            </div>
+                            <div id="value6"></div>
+                        </li>
+                        <li id="status7">
+                            <div id="name7"></div>
+                            <div class="statusWrap">
+                                <span class="bar" id="bar7"></span>
+                            </div>
+                            <div id="value7"></div>
+                        </li>
+                        <li id="status8">
+                            <div id="name8"></div>
+                            <div class="statusWrap">
+                                <span class="bar" id="bar8"></span>
+                            </div>
+                            <div id="value8"></div>
+                        </li>
+                        <li id="status9">
+                            <div id="name9"></div>
+                            <div class="statusWrap">
+                                <span class="bar" id="bar9"></span>
+                            </div>
+                            <div id="value9"></div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </main>
