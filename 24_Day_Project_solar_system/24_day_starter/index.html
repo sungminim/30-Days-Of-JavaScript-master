@@ -6,32 +6,93 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
 </head>
 
+<style>
+    * {margin:0;padding:0;border:none;}
+    body {position:relative;background:#1f2224;overflow:hidden;}
+    .bgArea {position:absolute;left:0;top:0;width:100%;height:100vh;z-index:-1;overflow:hidden;}
+
+    header{width:100%;max-width:1920px;box-sizing:border-box;padding:30px;text-align:center;}
+    header h1 {font-family:'Montserrat',sans-serif;font-size:40px;letter-spacing:-1px;color:#ddd;font-weight:700;text-shadow: 0 -8px 9px #850077;;}
+    header .searchZone {margin-top:50px;text-align: center;}
+    header .searchZone input {display:inline-block;width:400px;height:70px;margin-right:10px;padding:0 20px;background:#fff;border:1px solid #ddd;border-radius:5px;box-sizing:border-box;font-size: 18px;color:#ddd;vertical-align:top;}
+    header .searchZone select {display:inline-block;width:300px;height:70px;margin-right:10px;padding:0 20px;background:#fff;border:1px solid #ddd;border-radius:5px;box-sizing:border-box;font-size: 18px;color: gray;vertical-align:top;}
+    header .searchZone button {display:inline-block;width:200px;height:70px;margin-right:10px;padding:0 20px;background:gray;border:1px solid #ddd;border-radius:5px;box-sizing:border-box;font-size: 18px;color: #fff;vertical-align:top;}
+
+    .flex-container {max-width:1400px;width:100%;padding:50px;box-sizing:border-box;margin: 0 auto;background:rgba(255,255,255,0.1)}
+    .flex-item {text-align:center}
+
+    #exclam p {max-width:900px;margin:0 auto;padding:20px;box-sizing:border-box;background:rgba(255,255,255,0.2);text-align:center;color:#fff;font-size:20px;letter-spacing:-1px;}
+</style>
+
 <body>
+    <div class="bgArea">
+    </div>
     <header>
         <h1>Calculate a weight of an object on a planet</h1>
 
-        <input type="text" id="mass" placeholder="Mass in Kilogram" />
-        <select>
-            <option value='none'>--select planet-- </option>
-        </select>
-        <button>Calculate weight</button>
+        <div class="searchZone">
+            <input type="text" id="mass" placeholder="Mass in Kilogram" />
+            <select id="sel">
+                <option value="none">--select plant--</option>
+                <option value="0.055">MERCURY</option>
+                <option value="0.82">VENUS</option>
+                <option value="1.0">EARTH</option>
+                <option value="0.11">MARS</option>
+                <option value="318">JUPITER</option>
+                <option value="95.2">SATURN</option>
+                <option value="14.5">URANUS</option>
+                <option value="17.1">NAPTUNE</option>
+            </select>
+            <button onclick="cal()">Calculate weight</button>
+        </div>
 
+        
     </header>
     <main>
         <div class="flex-container">
             <div class="flex-item image">
-                <img src='./images/earth.png' class="planet-image" />
+                <!-- <img src='./images/earth.png' class="planet-image" /> -->
             </div>
-            <div class="flex-item description"></div>
+            <div class="flex-item description">
+                <div class="txt">
+                    <span> </span>
+                </div>
+
+                <div id="exclam"></div>
+                <div id="value"></div>
+            </div>
 
         </div>
-
-
     </main>
 
+    <script>
+        function cal(){
+            let opSel = document.getElementById("sel");
+            let opVal = opSel.options[opSel.selectedIndex].value;
+            let inpVal = document.getElementById("mass").value;
+            let weight = opVal * inpVal
+            let regExp = /^[0-9]*$/;
+            let valueTxt = document.getElementById("value") 
+            
+            if(inpVal === ""){
+                exclam.innerHTML = "<p>Mass is required</p>"
+            }else if(!regExp.test(inpVal)){ 
+                exclam.innerHTML = "<p>Mass must be Number</p>"
+            }else{ 
+                valueTxt.innerHTML = 'The weight of the object on ' + weight
+            }
 
+            if(opVal === "none"){
+                exclam.innerHTML = "<p>You did not choose a planet yet</p>"
+            }else {
+                
+            }
 
-
+            if(!opVal === "none" && !inpVal === ""){
+                valueTxt.innerHTML = 'The weight of the object on ' + weight
+            }
+        }
+    </script>
 
     <script src="./scripts/main.js"></script>
 </body>

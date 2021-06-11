@@ -23,5 +23,16 @@ const usersText = `{
     }
 ]
 }`
-const usersObj = JSON.parse(usersText, undefined, 4)
-console.log(usersObj)
+// const usersObj = JSON.parse(usersText, undefined, 4)
+// console.log(usersObj)
+
+
+function solution(n) {
+    var answer = String(n).split('').reverse();
+
+    var newAnswer = answer.map(Number)
+
+    return newAnswer;
+}
+
+solution(12345)
