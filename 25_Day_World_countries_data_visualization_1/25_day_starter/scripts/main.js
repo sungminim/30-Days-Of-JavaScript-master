@@ -15,6 +15,8 @@ function populationClick(){
     }
 }
 
+
+
 function languagesClick(){
     let maxVal = countries.sort(function(a,b) {
         return b.population - a.population;
@@ -31,3 +33,18 @@ function languagesClick(){
         document.getElementById("bar"+i).style.width = document.getElementById("bar"+i).innerText + "%"
     }
 }
+
+function languagesClick2(){
+    const score = countries.map((i) => {
+        return i.languages
+    })
+
+    const test = score.reduce( (a,b) => { return a.concat(b); }, [] );
+    
+    const res2 = test.reduce((t, a) => { if (t[a]) { t[a]++ } else { t[a] = 1 } return t }, {})
+
+    console.log(res2)
+
+}
+
+languagesClick2()

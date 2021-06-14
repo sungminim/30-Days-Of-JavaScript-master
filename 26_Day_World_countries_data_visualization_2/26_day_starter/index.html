@@ -3,6 +3,7 @@
 
 <head>
     <title>30DaysOfJavaScript:11 Day </title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -11,6 +12,41 @@
 
     <script src="./data/countries.js"></script>
     <script src="./scripts/main.js"></script>
+
+    <style>
+        * {padding:0;margin:0;}
+        body {background:#eee;overflow-x:hidden;padding-top:70px;}
+        h1 {font-size:40px;text-align:center;color:#fff;font-family:'Montserrat',sans-serif;font-weight:500;letter-spacing:1px;}
+        h1 span {display:block;padding:15px 0;color:gray;font-size:20px;letter-spacing:-1px;;}
+        ul li {list-style:none;}
+        button {border:none;background:#f2a93b;padding:10px 20px;font-size:17px;letter-spacing:-0px;color:#222;font-weight:500;}
+    </style>
+
+    <header>
+        <h1>
+            WORLD COUNTRIES LIST
+        </h1>
+        <div id="data">
+            <p class="data1">
+                Total Number of countries: <span id="data1"></span>
+            </p>
+        </div>
+
+        <div class="btnArea">
+            <button class="btn1">STARTING WORLD</button>
+            <button class="btn2">SEARCH WIDTH ANY WORD</button>
+            <button class="btn3"></button>
+        </div>
+
+        <div class="search">
+            <input type="text" id="searchText">
+        </div>
+    </header>
+    <section>
+        <ul class="worldList">
+            <li></li>            
+        </ul>
+    </section>
 
 </body>
 

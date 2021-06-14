@@ -12,7 +12,7 @@ const countries = [
     capital: 'Mariehamn',
     languages: ['Swedish'],
     population: 28875,
-    flag: 'https://restcountries.eu/data/ala.svg',
+    flag: 'https://restcountries.eu/data/ala.svg',  
     currency: 'Euro'
   },
   {
